@@ -1,0 +1,6 @@
+for n in range(110):
+    m = '0' * (8 - len(bin(n)[2:])) + bin(n)[2:]
+    r = m[:2] + m[-2:]
+    r = int(r, 2)
+    if r == 7:
+        print(r, n)

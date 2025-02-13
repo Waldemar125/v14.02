@@ -1,0 +1,8 @@
+from fnmatch import fnmatch
+for i in range(0, 10 ** 13, 519):
+    s = str(i)
+    if len(s) % 2 == 0:
+        if '0' not in s:
+            if sum([int(s[j]) for j in range(len(s) // 2)]) == sum([int(s[j]) for j in range(len(s) // 2 + 1, len(s))]):
+                if fnmatch(s, '32*54?123'):
+                    print(i, i / 519)

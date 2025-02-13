@@ -1,0 +1,11 @@
+s = [int(i) for i in open('17 (3).txt').readlines()]
+mn = (min(s) + max(s)) // 2
+k = 0
+m = 0
+for i in range(0, len(s) // 2):
+    a = s[i]
+    b = s[len(s) - 1 - i]
+    if a < mn < b or b < mn < a:
+        k += 1
+        m = max(m, a + b)
+print(k, m)
